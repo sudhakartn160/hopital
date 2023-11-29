@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .log {
+            max-width: 300px;
+            margin: 50px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: inherit;
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .intitle {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            color: white; 
+        }
+
+        input, select {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(111, 185, 113);
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        .pp {
+            text-align: center;
+        }
+
+        .invoiceOutput {
+            text-align: justify;
+        }
+
+        #name {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="name">QuantumCare Hospital Login</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+           <li> <a href="contact.html">Contact</a></li>
+           <li> <a href="services.html">Services</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <div class="log">
+            <h1 class="intitle">QuantumCare Hospital Login</h1>
+            <form id="loginForm">
+                <label for="userType">Select User Type:</label>
+                <select id="userType" name="userType">
+                    <option value="doctor">Doctor</option>
+                    <option value="staff">Staff</option>
+                </select>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Medical Billing System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
